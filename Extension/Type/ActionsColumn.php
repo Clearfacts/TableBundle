@@ -109,6 +109,11 @@ class ActionsColumn extends Column
             if (! isset($cell['actions'][$action]['icon']))
             {
                 $cell['actions'][$action]['icon'] = $action;
+            } else {
+                $icon = $cell['actions'][$action]['icon'];
+                if(is_callable($icon)) {
+                    $cell['actions'][$action]['icon'] = $icon($row);
+                }
             }
 
             if (isset($cell['actions'][$action]['disabled']))
@@ -129,6 +134,14 @@ class ActionsColumn extends Column
                         ' ' .
                         'disabled'
                     );
+                }
+            }
+
+            if (isset($cell['actions'][$action]['title']))
+            {
+                $title = $cell['actions'][$action]['title'];
+                if(is_callable($title)) {
+                    $cell['actions'][$action]['title'] = $title($row);
                 }
             }
 
