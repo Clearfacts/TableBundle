@@ -65,11 +65,12 @@ class QueryBuilderFilter implements QueryBuilderFilterInterface
 
     private function retrieveFilterFromSessionOrDefaultOne($key)
     {
-        if(count($this->retrieveFilterFromSession($key)) === 0 && !$this->values) {
+        $sessionFilters = $this->retrieveFilterFromSession($key) ? : [];
+        if(count($sessionFilters) === 0 && !$this->values) {
             $this->values = $this->getDefaultValues();
             return $this->getDefaultValues();
         } else {
-            return $this->retrieveFilterFromSession($key);
+            return $sessionFilters;
         }
     }
 
@@ -254,7 +255,7 @@ class QueryBuilderFilter implements QueryBuilderFilterInterface
                 'datum_from_and_to' => true,
                 'entire_day' => true,
                 'attr' => array(),
-        ));
+            ));
 
         $resolver->setDefined(['label', 'form_field_name', 'filter', 'multiple']);
     }
