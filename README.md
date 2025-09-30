@@ -174,3 +174,8 @@ $this->createFilter(new myFiltertype(), $myDefaultValues);
 
 $myDefaultValues should be an array with keys = form field names.
 will only be set if there is no filter in the session and no filter is posted yet.
+
+## Technical debt links
+
+[Barometer IT](https://wolterskluwer.barometerit.com/b/system/041800002496)
+[SonarQube Project](https://sonarqube.cloud-dev.wolterskluwer.eu//dashboard?id=clearfacts%3ATableBundle)
