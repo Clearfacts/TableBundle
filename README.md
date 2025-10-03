@@ -178,4 +178,5 @@ will only be set if there is no filter in the session and no filter is posted ye
 ## Technical debt links
 
 [Barometer IT](https://wolterskluwer.barometerit.com/b/system/041800002496)
-[SonarQube Project](https://sonarqube.cloud-dev.wolterskluwer.eu//dashboard?id=clearfacts%3ATableBundle)
+[SonarQube Project](https://sonarqube.cloud-dev.wolterskluwer.eu/dashboard?id=clearfacts%3ATableBundle)
+[Checkmarx Project](https://test4tools.cchaxcess.com/CxWebClient/ProjectStateSummary.aspx?projectid=17874)
